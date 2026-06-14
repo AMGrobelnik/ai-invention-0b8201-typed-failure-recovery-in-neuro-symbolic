@@ -1,0 +1,104 @@
+{
+  "bridge:smart:not_smart": {
+    "bridge": "not_smart -> smart",
+    "span": "Dave is not smart. Fiona is not smart."
+  },
+  "abduct:nice:fiona:-9219987968352467588": {
+    "new_fact": "nice(fiona)",
+    "span": "Fiona is nice."
+  },
+  "bridge:big:not_big": {
+    "bridge": "not_big -> big",
+    "span": "Charlie is not big. Charlie is not big."
+  },
+  "generic:green anne:532109556263749395": {
+    "new_facts": [
+      "green(anne)"
+    ],
+    "span": "Anne is green."
+  },
+  "generic:cold harry:7309045741160816638": {
+    "new_facts": [
+      "Harry is blue"
+    ],
+    "span": "Harry is cold."
+  },
+  "generic:round anne:-251228734127322195": {
+    "new_facts": [
+      "round(anne)"
+    ],
+    "span": "Anne is round."
+  },
+  "generic:smart dave:-9219987968352467588": {
+    "new_facts": [
+      "Dave is smart."
+    ],
+    "span": "Dave is not smart."
+  },
+  "generic:nice fiona:-9219987968352467588": {
+    "new_facts": [
+      "Fiona is nice."
+    ],
+    "span": "Fiona is nice."
+  },
+  "generic:smart anne:-9219987968352467588": {
+    "new_facts": [
+      "smart(anne)."
+    ],
+    "span": "Anne is not smart."
+  },
+  "generic:rough dave:-9219987968352467588": {
+    "new_facts": [],
+    "span": "Dave is rough."
+  },
+  "generic:rough bob:-1460769800248810663": {
+    "new_facts": [
+      "Bob is blue.",
+      "Bob is white."
+    ],
+    "span": "All blue, white things are rough."
+  },
+  "generic:white gary:-1460769800248810663": {
+    "new_facts": [
+      "white(gary)"
+    ],
+    "span": "Gary is white."
+  },
+  "generic:red erin:-425568703066730496": {
+    "new_facts": [
+      "Erin is red."
+    ],
+    "span": "The query 'red erin' requires the fact 'Erin is red' to be true. However, the source text explicitly states 'Erin is not red', which contradicts this requirement. To make the query succeed, the fact 'Erin is red' must be added to the knowledge base."
+  },
+  "generic:white dave:-425568703066730496": {
+    "new_facts": [
+      "Dave is white"
+    ],
+    "span": "If Dave is not quiet and Dave is not red then Dave is not white."
+  },
+  "generic:green harry:8348241716864356156": {
+    "new_facts": [
+      "Harry is green"
+    ],
+    "span": "Charlie is green. Harry is furry. Harry is red."
+  },
+  "generic:big charlie:3928456689116059053": {
+    "new_facts": [
+      "big(charlie) :- not_big(charlie), !, fail.",
+      "~big(charlie)."
+    ],
+    "span": "Charlie is not big."
+  },
+  "generic:nice anne:9009252244494915087": {
+    "new_facts": [
+      "Anne is nice"
+    ],
+    "span": "Anne is nice."
+  },
+  "generic:quiet gary:1017697612606436933": {
+    "new_facts": [
+      "Gary is quiet."
+    ],
+    "span": "Gary is big. Gary is blue. Gary is not cold. Gary is furry. Gary is young."
+  }
+}

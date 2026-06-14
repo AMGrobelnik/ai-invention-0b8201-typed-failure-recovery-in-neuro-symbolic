@@ -1,0 +1,401 @@
+{
+  "metadata": {
+    "method_name": "Typed Unification Failure Recovery Pipeline",
+    "description": "Neuro-symbolic pipeline with typed failure detection (5 types) and type-specific LLM repairs. Compared against ARGOS and Logic-LM baselines.",
+    "config": {
+      "sentbert_model": "all-MiniLM-L6-v2",
+      "sentbert_threshold": 0.75,
+      "openrouter_model": "anthropic/claude-haiku-4-5",
+      "max_retries_per_repair": 2,
+      "cost_budget_usd": 10.0,
+      "mini_data_path": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_3ivQuy3SfWcv/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/mini_data_out.json",
+      "full_data_dir": "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_3ivQuy3SfWcv/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out",
+      "max_examples_per_dataset": 100,
+      "output_path": "method_out.json",
+      "cache_path": "outputs/bridge_axiom_cache.json",
+      "gradual_scaling": true
+    },
+    "metrics": {
+      "mini": {
+        "typed": {
+          "count": 6,
+          "accuracy": 0.8333,
+          "hallucination_rate": 0.0,
+          "repairs_attempted": 0,
+          "failure_type_distribution": {
+            "0": 6
+          }
+        },
+        "argos": {
+          "count": 6,
+          "accuracy": 0.8333,
+          "hallucination_rate": 0.0,
+          "repairs_attempted": 0,
+          "failure_type_distribution": {
+            "0": 6
+          }
+        },
+        "logic_lm": {
+          "count": 6,
+          "accuracy": 0.8333,
+          "hallucination_rate": 0.0,
+          "repairs_attempted": 0,
+          "failure_type_distribution": {
+            "0": 6
+          }
+        }
+      },
+      "full": {
+        "typed": {
+          "overall": {
+            "count": 94,
+            "accuracy": 0.8936,
+            "hallucination_rate": 0.766,
+            "repairs_attempted": 16,
+            "failure_type_distribution": {
+              "0": 34,
+              "-1": 48,
+              "1": 7,
+              "3": 5
+            }
+          },
+          "proofwriter": {
+            "count": 94,
+            "accuracy": 0.8936,
+            "hallucination_rate": 0.766,
+            "repairs_attempted": 16,
+            "failure_type_distribution": {
+              "0": 34,
+              "-1": 48,
+              "1": 7,
+              "3": 5
+            }
+          },
+          "clutrr": {
+            "count": 0,
+            "accuracy": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "multihop_proofwriter": {
+            "count": 1,
+            "accuracy": 1.0
+          },
+          "multihop_clutrr": {
+            "count": 0,
+            "accuracy": 0.0
+          }
+        },
+        "argos": {
+          "overall": {
+            "count": 94,
+            "accuracy": 0.7979,
+            "hallucination_rate": 0.6489,
+            "repairs_attempted": 16,
+            "failure_type_distribution": {
+              "0": 42,
+              "-1": 48,
+              "3": 2,
+              "1": 2
+            }
+          },
+          "proofwriter": {
+            "count": 94,
+            "accuracy": 0.7979,
+            "hallucination_rate": 0.6489,
+            "repairs_attempted": 16,
+            "failure_type_distribution": {
+              "0": 42,
+              "-1": 48,
+              "3": 2,
+              "1": 2
+            }
+          },
+          "clutrr": {
+            "count": 0,
+            "accuracy": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "multihop_proofwriter": {
+            "count": 1,
+            "accuracy": 1.0
+          },
+          "multihop_clutrr": {
+            "count": 0,
+            "accuracy": 0.0
+          }
+        },
+        "logic_lm": {
+          "overall": {
+            "count": 94,
+            "accuracy": 0.883,
+            "hallucination_rate": 0.7766,
+            "repairs_attempted": 16,
+            "failure_type_distribution": {
+              "0": 30,
+              "-1": 48,
+              "1": 10,
+              "3": 6
+            }
+          },
+          "proofwriter": {
+            "count": 94,
+            "accuracy": 0.883,
+            "hallucination_rate": 0.7766,
+            "repairs_attempted": 16,
+            "failure_type_distribution": {
+              "0": 30,
+              "-1": 48,
+              "1": 10,
+              "3": 6
+            }
+          },
+          "clutrr": {
+            "count": 0,
+            "accuracy": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "multihop_proofwriter": {
+            "count": 1,
+            "accuracy": 1.0
+          },
+          "multihop_clutrr": {
+            "count": 0,
+            "accuracy": 0.0
+          }
+        }
+      }
+    },
+    "type1_threshold_sensitivity": {
+      "0.5": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 16,
+        "fn": 0
+      },
+      "0.6": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 16,
+        "fn": 0
+      },
+      "0.7": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 16,
+        "fn": 0
+      },
+      "0.75": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 16,
+        "fn": 0
+      },
+      "0.8": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 16,
+        "fn": 0
+      },
+      "0.9": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "tn": 16,
+        "fn": 0
+      }
+    },
+    "ablations": {
+      "note": "ablation uses same typed pipeline; repair type disabling via mode label",
+      "full_typed_accuracy": 0.8936
+    },
+    "bridge_axiom_cache": {
+      "total_entries": 18,
+      "cache_hits_estimated": 2
+    },
+    "sample_traces": [
+      {
+        "example_id": "AttNeg-OWA-D0-1778",
+        "dataset": "proofwriter",
+        "query": "Theory: Anne is smart. Dave is round. If someone is cold then they are blue. If someone is round and not cold then they are smart.\nQuery: Anne is green.",
+        "gold": "false",
+        "prediction": "false",
+        "correct": true,
+        "failure_type": 1,
+        "repair_info": {
+          "repair_type": 1,
+          "success": false,
+          "reason": "no similar predicates"
+        },
+        "proof_atoms": [],
+        "hallucination_rate": 1.0
+      },
+      {
+        "example_id": "AttNoneg-OWA-D0-4291",
+        "dataset": "proofwriter",
+        "query": "Theory: Erin is blue. Erin is cold. Erin is kind. Erin is nice. Erin is young. Harry is big. Harry is young. If something is blue then it is big. All blue, young things are kind. Big things are nice. ",
+        "gold": "false",
+        "prediction": "false",
+        "correct": true,
+        "failure_type": 3,
+        "repair_info": {
+          "repair_type": 3,
+          "success": false,
+          "reason": "LLM no fact"
+        },
+        "proof_atoms": [],
+        "hallucination_rate": 1.0
+      },
+      {
+        "example_id": "AttNoneg-OWA-D0-2748",
+        "dataset": "proofwriter",
+        "query": "Theory: Anne is rough. Anne is smart. Anne is young. If something is young then it is white. Round, blue things are furry. Round things are smart. Rough, blue things are white. All blue things are whi",
+        "gold": "false",
+        "prediction": "false",
+        "correct": true,
+        "failure_type": 1,
+        "repair_info": {
+          "repair_type": 1,
+          "success": false,
+          "reason": "no similar predicates"
+        },
+        "proof_atoms": [],
+        "hallucination_rate": 1.0
+      }
+    ],
+    "cost_summary": {
+      "total_usd": 0.019906,
+      "total_calls": 88,
+      "total_input_tokens": 15952,
+      "total_output_tokens": 1786,
+      "model": "anthropic/claude-haiku-4-5",
+      "budget_usd": 10.0,
+      "budget_remaining_usd": 9.980094
+    },
+    "note": ""
+  },
+  "datasets": [
+    {
+      "dataset": "proofwriter",
+      "examples": [
+        {
+          "input": "Theory: Gary is furry. Gary is nice. Gary is red. Gary is rough. Gary is not smart. Gary is white. Gary is young. If Gary is nice and Gary is not white then Gary is red. If someone is white then they ...",
+          "output": "true",
+          "predict_typed": "true",
+          "predict_baseline_argos": "true",
+          "predict_baseline_logic_lm": "true",
+          "metadata_dataset": "proofwriter",
+          "metadata_reasoning_depth": 0,
+          "metadata_record_id": "AttNeg-OWA-D0-4611",
+          "metadata_typed_correct": true,
+          "metadata_argos_correct": true,
+          "metadata_logic_lm_correct": true,
+          "metadata_failure_type": 0,
+          "metadata_hallucination_rate": 0.0,
+          "metadata_repairs_attempted": 0
+        },
+        {
+          "input": "Theory: Gary is furry. Gary is nice. Gary is red. Gary is rough. Gary is not smart. Gary is white. Gary is young. If Gary is nice and Gary is not white then Gary is red. If someone is white then they ...",
+          "output": "false",
+          "predict_typed": "false",
+          "predict_baseline_argos": "false",
+          "predict_baseline_logic_lm": "false",
+          "metadata_dataset": "proofwriter",
+          "metadata_reasoning_depth": 0,
+          "metadata_record_id": "AttNeg-OWA-D0-4611",
+          "metadata_typed_correct": true,
+          "metadata_argos_correct": true,
+          "metadata_logic_lm_correct": true,
+          "metadata_failure_type": 0,
+          "metadata_hallucination_rate": 0.0,
+          "metadata_repairs_attempted": 0
+        },
+        {
+          "input": "Theory: Bob is furry. Dave is quiet. Harry is big. Rough things are white. All rough things are white. If Dave is rough then Dave is green.\nQuery: Bob is furry.",
+          "output": "true",
+          "predict_typed": "true",
+          "predict_baseline_argos": "true",
+          "predict_baseline_logic_lm": "true",
+          "metadata_dataset": "proofwriter",
+          "metadata_reasoning_depth": 0,
+          "metadata_record_id": "AttNoneg-OWA-D0-3321",
+          "metadata_typed_correct": true,
+          "metadata_argos_correct": true,
+          "metadata_logic_lm_correct": true,
+          "metadata_failure_type": 0,
+          "metadata_hallucination_rate": 0.0,
+          "metadata_repairs_attempted": 0
+        }
+      ]
+    },
+    {
+      "dataset": "clutrr",
+      "examples": [
+        {
+          "input": "Story: [Clarence]'s granddaughter, [Emily], was busy helping her brother, [Michael], move to college.\nQuery: ('Clarence', 'Michael')",
+          "output": "grandson",
+          "predict_typed": "grandson",
+          "predict_baseline_argos": "grandson",
+          "predict_baseline_logic_lm": "grandson",
+          "metadata_dataset": "clutrr",
+          "metadata_reasoning_depth": 2,
+          "metadata_record_id": "511be16e-05ba-4d6a-b258-ef2201d6757a",
+          "metadata_typed_correct": true,
+          "metadata_argos_correct": true,
+          "metadata_logic_lm_correct": true,
+          "metadata_failure_type": 0,
+          "metadata_hallucination_rate": 0.0,
+          "metadata_repairs_attempted": 0
+        },
+        {
+          "input": "Story: [Emily] and her granddaughter [Ashley] went to the mall [Michael] likes to visit his sister. Her name is [Emily].\nQuery: ('Ashley', 'Michael')",
+          "output": "grandson",
+          "predict_typed": "great-aunt",
+          "predict_baseline_argos": "great-aunt",
+          "predict_baseline_logic_lm": "great-aunt",
+          "metadata_dataset": "clutrr",
+          "metadata_reasoning_depth": 2,
+          "metadata_record_id": "0f226f4d-dc2d-4051-a875-9e555ecf0f22",
+          "metadata_typed_correct": false,
+          "metadata_argos_correct": false,
+          "metadata_logic_lm_correct": false,
+          "metadata_failure_type": 0,
+          "metadata_hallucination_rate": 0.0,
+          "metadata_repairs_attempted": 0
+        },
+        {
+          "input": "Story: [Tony] and his sister, [June], went to a sneak preview of the Avengers movie and loved it. [Clarence] has 3 children, and one grandson. The Grandsons name is [Tony]\nQuery: ('Clarence', 'June')",
+          "output": "granddaughter",
+          "predict_typed": "granddaughter",
+          "predict_baseline_argos": "granddaughter",
+          "predict_baseline_logic_lm": "granddaughter",
+          "metadata_dataset": "clutrr",
+          "metadata_reasoning_depth": 2,
+          "metadata_record_id": "946e19f0-a149-4317-9ea9-053788662090",
+          "metadata_typed_correct": true,
+          "metadata_argos_correct": true,
+          "metadata_logic_lm_correct": true,
+          "metadata_failure_type": 0,
+          "metadata_hallucination_rate": 0.0,
+          "metadata_repairs_attempted": 0
+        }
+      ]
+    }
+  ]
+}

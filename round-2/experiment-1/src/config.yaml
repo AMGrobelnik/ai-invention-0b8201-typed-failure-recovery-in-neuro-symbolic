@@ -1,0 +1,11 @@
+sentbert_model: "all-MiniLM-L6-v2"
+sentbert_threshold: 0.75
+openrouter_model: "anthropic/claude-haiku-4-5"
+max_retries_per_repair: 2
+cost_budget_usd: 10.0
+mini_data_path: "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_3ivQuy3SfWcv/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/mini_data_out.json"
+full_data_dir: "/home/adrian/projects/ai-inventor/aii_data/users/admin/runs/run_3ivQuy3SfWcv/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out"
+max_examples_per_dataset: 100
+output_path: "method_out.json"
+cache_path: "outputs/bridge_axiom_cache.json"
+gradual_scaling: true
