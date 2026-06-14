@@ -1,0 +1,106 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Pan2023,Han2022}
+\citation{Cotnareanu2026}
+\citation{Pan2023}
+\citation{SWIProlog}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Problem Definition}{1}{subsection.1.1}\protected@file@percent }
+\citation{Pan2023}
+\citation{Cotnareanu2026}
+\citation{Weber2019}
+\citation{Cornelio2024}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Why the Problem Is Hard}{2}{subsection.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Why It Hasn't Been Solved}{2}{subsection.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4}Our Contribution}{2}{subsection.1.4}\protected@file@percent }
+\citation{Brassard2024}
+\citation{Pan2023}
+\citation{Han2022}
+\citation{Khashabi2021}
+\citation{Cotnareanu2026}
+\citation{Thawani2020}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5}Summary of Contributions}{3}{subsection.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{3}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Neuro-Symbolic Reasoning with Language Models}{3}{subsection.2.1}\protected@file@percent }
+\citation{Weber2019}
+\citation{Manhaeve2018}
+\citation{Hao2022}
+\citation{Cornelio2024}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces End-to-end neuro-symbolic pipeline: (1) LLM extracts FOL predicates from natural text with source-span annotations; (2) facts loaded into Prolog KB; (3) query execution may fail; (4) typed failure detector classifies failure type via exception inspection and ontology lookup; (5) type-specific repair prompt dispatched; (6) repair verified via re-run; (7) Type~1 repairs cached for reuse.}}{4}{figure.1}\protected@file@percent }
+\newlabel{fig:pipeline}{{1}{4}{End-to-end neuro-symbolic pipeline: (1) LLM extracts FOL predicates from natural text with source-span annotations; (2) facts loaded into Prolog KB; (3) query execution may fail; (4) typed failure detector classifies failure type via exception inspection and ontology lookup; (5) type-specific repair prompt dispatched; (6) repair verified via re-run; (7) Type~1 repairs cached for reuse}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Abductive Logic Programming and Commonsense Reasoning}{4}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Soft Unification and Neural-Symbolic Systems}{4}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Failure Detection and Recovery}{4}{subsection.2.4}\protected@file@percent }
+\citation{Tafjord2021}
+\citation{Sinha2019}
+\citation{Reimers2019}
+\citation{Vrandecic2014}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Logical Reasoning Benchmarks}{5}{subsection.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methods}{5}{section.3}\protected@file@percent }
+\newlabel{sec:methods}{{3}{5}{Methods}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Typed Failure Detection}{5}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Type 1: Lexical Predicate Mismatch}{5}{subsubsection.3.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Type 2: Argument-Structure Mismatch}{5}{subsubsection.3.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}Type 3: Missing Domain Fact}{5}{subsubsection.3.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.4}Type 4: Ontological Category Violation}{5}{subsubsection.3.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Type-Specific Repair Strategies}{6}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Type 1 Repair: Bridge Axiom Generation}{6}{subsubsection.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Type 2 Repair: FOL Restructuring}{6}{subsubsection.3.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}Type 3 Repair: Minimal Abductive Fact Addition}{6}{subsubsection.3.2.3}\protected@file@percent }
+\citation{Tafjord2021}
+\citation{Sinha2019}
+\citation{Cotnareanu2026}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.4}Type 4 Repair: Entity Re-Identification}{7}{subsubsection.3.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Span-Attributed Proof Construction}{7}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Bridge-Axiom Library Accumulation}{7}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{7}{section.4}\protected@file@percent }
+\newlabel{sec:experiments}{{4}{7}{Experiments}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Datasets}{7}{subsection.4.1}\protected@file@percent }
+\citation{Pan2023}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Experimental Setup}{8}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Evaluation Metrics}{8}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Results}{8}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}Accuracy}{8}{subsubsection.4.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Hallucination Measurement}{8}{subsubsection.4.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Accuracy on 94 ProofWriter examples (depth 0--5). TYPED: 89.36\%, ARGOS: 79.79\%, Logic-LM: 88.30\%. TYPED outperforms ARGOS by +9.57~pp and Logic-LM by +1.06~pp, confirming typed failure dispatch beats undifferentiated repair.}}{9}{figure.2}\protected@file@percent }
+\newlabel{fig:accuracy}{{2}{9}{Accuracy on 94 ProofWriter examples (depth 0--5). TYPED: 89.36\%, ARGOS: 79.79\%, Logic-LM: 88.30\%. TYPED outperforms ARGOS by +9.57~pp and Logic-LM by +1.06~pp, confirming typed failure dispatch beats undifferentiated repair}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.3}Type 1 (Lexical Mismatch) Detection}{9}{subsubsection.4.4.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Threshold sensitivity for Type~1 (lexical mismatch) detection on ProofWriter.}}{9}{table.1}\protected@file@percent }
+\newlabel{tab:threshold}{{1}{9}{Threshold sensitivity for Type~1 (lexical mismatch) detection on ProofWriter}{table.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.4}Bridge-Axiom Cache Statistics}{9}{subsubsection.4.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.5}LLM Cost}{10}{subsubsection.4.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.6}Sample Traces}{10}{subsubsection.4.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Ablation Study}{10}{subsection.4.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Ablation study: accuracy impact of disabling each repair type.}}{10}{table.2}\protected@file@percent }
+\newlabel{tab:ablation}{{2}{10}{Ablation study: accuracy impact of disabling each repair type}{table.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{10}{section.5}\protected@file@percent }
+\newlabel{sec:discussion}{{5}{10}{Discussion}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Interpretation of Results}{10}{subsection.5.1}\protected@file@percent }
+\citation{Brassard2024}
+\citation{Pan2023}
+\citation{Cotnareanu2026}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Limitations}{11}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Comparison to Prior Work}{11}{subsection.5.3}\protected@file@percent }
+\citation{Brassard2024}
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{Brassard2024}{{1}{2024}{{Brassard et~al.}}{{Brassard, Corneau-Tremblay, Wehrstedt, Carvalho, and Rish}}}
+\bibcite{Cornelio2024}{{2}{2024}{{Cornelio and Diab}}{{}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Insights for Future Work}{12}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{12}{section.6}\protected@file@percent }
+\bibcite{Cotnareanu2026}{{3}{2026}{{Cotnareanu et~al.}}{{Cotnareanu, Ch{\'{e}}telat, Zhang, and Coates}}}
+\bibcite{Han2022}{{4}{2022}{{Han et~al.}}{{Han, Schoelkopf, Zhao, Qi, Riddell, Benson, Sun, Zubova, Qiao, Burtell, Peng, Fan, Liu, Wong, Sailor, Ni, Nan, Kasai, Yu, Zhang, Joty, Fabbri, Kryscinski, Lin, Xiong, and Radev}}}
+\bibcite{Hao2022}{{5}{2022}{{Hao et~al.}}{{Hao, Gu, Ma, Hong, Wang, Wang, and Hu}}}
+\bibcite{Khashabi2021}{{6}{2021}{{Khashabi et~al.}}{{Khashabi, Min, Khot, Sabharwal, Tafjord, Clark, and Hajishirzi}}}
+\bibcite{Manhaeve2018}{{7}{2018}{{Manhaeve et~al.}}{{Manhaeve, Dumancic, Kimmig, Demeester, and Raedt}}}
+\bibcite{Pan2023}{{8}{2023}{{Pan et~al.}}{{Pan, Albalak, Wang, and Wang}}}
+\bibcite{Reimers2019}{{9}{2019}{{Reimers and Gurevych}}{{}}}
+\bibcite{Sinha2019}{{10}{2019}{{Sinha et~al.}}{{Sinha, Sodhani, Dong, Pineau, and Hamilton}}}
+\bibcite{SWIProlog}{{11}{2024}{{SWI-Prolog}}{{}}}
+\bibcite{Tafjord2021}{{12}{2021}{{Tafjord et~al.}}{{Tafjord, Dalvi, and Clark}}}
+\bibcite{Thawani2020}{{13}{2020}{{Thawani et~al.}}{{Thawani, Pujara, Szekely, and Ilievski}}}
+\bibcite{Vrandecic2014}{{14}{2014}{{Vrand{\v {e}}{\v {c}}i{\'{c}} and Kr{\"{o}}tzsch}}{{}}}
+\bibcite{Weber2019}{{15}{2019}{{Weber et~al.}}{{Weber, Minervini, M\"{u}nchmeyer, Leser, and Rockt\"{a}schel}}}
+\gdef \@abspage@last{14}
