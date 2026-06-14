@@ -1,0 +1,50 @@
+{
+  "datasets": [
+    {
+      "dataset": "proofwriter",
+      "examples": [
+        {
+          "input": "Theory: Gary is furry. Gary is nice. Gary is red. Gary is rough. Gary is not smart. Gary is white. Gary is young. If Gary is nice and Gary is not white then Gary is red. If someone is white then they ...",
+          "output": "true",
+          "metadata_reasoning_depth": 0,
+          "metadata_record_id": "AttNeg-OWA-D0-4611"
+        },
+        {
+          "input": "Theory: Gary is furry. Gary is nice. Gary is red. Gary is rough. Gary is not smart. Gary is white. Gary is young. If Gary is nice and Gary is not white then Gary is red. If someone is white then they ...",
+          "output": "false",
+          "metadata_reasoning_depth": 0,
+          "metadata_record_id": "AttNeg-OWA-D0-4611"
+        },
+        {
+          "input": "Theory: Bob is furry. Dave is quiet. Harry is big. Rough things are white. All rough things are white. If Dave is rough then Dave is green.\nQuery: Bob is furry.",
+          "output": "true",
+          "metadata_reasoning_depth": 0,
+          "metadata_record_id": "AttNoneg-OWA-D0-3321"
+        }
+      ]
+    },
+    {
+      "dataset": "clutrr",
+      "examples": [
+        {
+          "input": "Story: [Clarence]'s granddaughter, [Emily], was busy helping her brother, [Michael], move to college.\nQuery: ('Clarence', 'Michael')",
+          "output": "grandson",
+          "metadata_reasoning_depth": 2,
+          "metadata_record_id": "511be16e-05ba-4d6a-b258-ef2201d6757a"
+        },
+        {
+          "input": "Story: [Emily] and her granddaughter [Ashley] went to the mall [Michael] likes to visit his sister. Her name is [Emily].\nQuery: ('Ashley', 'Michael')",
+          "output": "grandson",
+          "metadata_reasoning_depth": 2,
+          "metadata_record_id": "0f226f4d-dc2d-4051-a875-9e555ecf0f22"
+        },
+        {
+          "input": "Story: [Tony] and his sister, [June], went to a sneak preview of the Avengers movie and loved it. [Clarence] has 3 children, and one grandson. The Grandsons name is [Tony]\nQuery: ('Clarence', 'June')",
+          "output": "granddaughter",
+          "metadata_reasoning_depth": 2,
+          "metadata_record_id": "946e19f0-a149-4317-9ea9-053788662090"
+        }
+      ]
+    }
+  ]
+}
